@@ -49,10 +49,48 @@ class MyApp extends StatelessWidget {
                 decoration: BoxDecoration(
                     color: Colors.lightBlue,
                     borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(25),
-                        topRight: Radius.circular(25),
+                        topLeft: Radius.circular(5),
+                        topRight: Radius.circular(5),
                         bottomLeft: Radius.circular(25),
                         bottomRight: Radius.circular(25))),
+              ),
+              Stack(
+                children: [
+                  Container(
+                    margin: EdgeInsets.all(15),
+                    height: 200,
+                    decoration: BoxDecoration(
+                        color: Colors.lightBlue,
+                        borderRadius: BorderRadius.all(Radius.circular(20))),
+                  ),
+                  Row(
+                    children: [
+                      Container(
+                        child: Center(
+                          child: Text(
+                            "ini Roster Pelajaran Pertama",
+                            style: TextStyle(fontSize: 15),
+                          ),
+                        ),
+                        margin: EdgeInsets.all(15),
+                        width: 347,
+                        height: 40,
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            border: Border(
+                                top: BorderSide(color: Colors.black),
+                                left: BorderSide(color: Colors.black),
+                                right: BorderSide(color: Colors.black),
+                                bottom: BorderSide(color: Colors.black)),
+                            borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(18),
+                                topRight: Radius.circular(18),
+                                bottomLeft: Radius.circular(0),
+                                bottomRight: Radius.circular(0))),
+                      ),
+                    ],
+                  ),
+                ],
               )
             ],
           ),
