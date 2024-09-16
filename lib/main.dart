@@ -9,90 +9,70 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final mediaQuery = MediaQuery.of(context);
-    final screenWidth = mediaQuery.size.width;
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        // appBar: AppBar(
-        //   toolbarHeight: 70,
-        //   title: Center(
-        //     child: Text(
-        //       "TOOSYTA",
-        //       style: TextStyle(
-        //           color: Colors.white,
-        //           fontWeight: FontWeight.w900,
-        //           fontSize: 30),
-        //     ),
-        //   ),
-        //   backgroundColor: Colors.lightBlue.shade600,
-        // ),
         body: SingleChildScrollView(
-          child: Column(
-            children: [
-              Container(
-                margin: EdgeInsets.all(5),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Text(
-                      "TOOSYTA",
-                      style: TextStyle(
-                          fontSize: 30,
-                          fontWeight: FontWeight.w800,
-                          color: Colors.white),
-                    )
-                  ],
-                ),
-                height: 100,
-                width: screenWidth,
-                decoration: BoxDecoration(
-                    color: Colors.lightBlue,
-                    borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(5),
-                        topRight: Radius.circular(5),
-                        bottomLeft: Radius.circular(25),
-                        bottomRight: Radius.circular(25))),
-              ),
-              Stack(
-                children: [
-                  Container(
-                    margin: EdgeInsets.all(15),
-                    height: 200,
-                    decoration: BoxDecoration(
-                        color: Colors.lightBlue,
-                        borderRadius: BorderRadius.all(Radius.circular(20))),
-                  ),
-                  Row(
+          child: Container(
+            padding: EdgeInsets.all(14),
+            decoration: BoxDecoration(
+                color: Colors.blue,
+                borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(26),
+                    bottomRight: Radius.circular(26))),
+            child: Column(
+              children: [
+                Container(
+                  height: 100,
+                  decoration: BoxDecoration(
+                      color: Colors.blue,
+                      borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(35),
+                          bottomRight: Radius.circular(35))),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Container(
-                        child: Center(
-                          child: Text(
-                            "ini Roster Pelajaran Pertama",
-                            style: TextStyle(fontSize: 15),
-                          ),
-                        ),
-                        margin: EdgeInsets.all(15),
-                        width: 347,
-                        height: 40,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            border: Border(
-                                top: BorderSide(color: Colors.black),
-                                left: BorderSide(color: Colors.black),
-                                right: BorderSide(color: Colors.black),
-                                bottom: BorderSide(color: Colors.black)),
-                            borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(18),
-                                topRight: Radius.circular(18),
-                                bottomLeft: Radius.circular(0),
-                                bottomRight: Radius.circular(0))),
+                      Text(
+                        "TOOSYTA",
+                        style: TextStyle(
+                            fontSize: 35,
+                            fontWeight: FontWeight.w900,
+                            color: Colors.white),
                       ),
+                      IconButton(
+                          onPressed: () {},
+                          icon: Icon(
+                            Icons.person,
+                            color: Colors.white,
+                          ))
                     ],
                   ),
-                ],
-              )
-            ],
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                        // width: 350,
+                        height: 200,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20.0),
+                          image: DecorationImage(
+                            image: AssetImage(
+                              "assets/images/TOOSYTA.png",
+                            ),
+                            fit: BoxFit.cover,
+                          ),
+                        )),
+                  ],
+                ),
+                Row(
+                  children: [Container()],
+                ),
+              ],
+            ),
           ),
         ),
       ),
